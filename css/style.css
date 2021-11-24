@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -9,29 +11,13 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
 }
 
-.section-hero {
-  background: #fdf2e9;
-  padding: 9.6rem 0;
-}
-
-.hero-img {
-  width: 100%;
-}
-
-.hero {
-  margin: 0 auto;
-  max-width: 130rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 9.6rem;
-}
+/* =======GENERAL COMPONENTS======= */
 
 .heading-primary {
   font-size: 6.2rem;
@@ -42,12 +28,6 @@ body {
   margin-bottom: 3.2rem;
 }
 
-.hero-description {
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
-}
-
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -56,6 +36,7 @@ body {
   padding: 1.6rem 3.2rem;
   border-radius: 10px;
   transition: all ease-in 200ms;
+  font-weight: 600;
 }
 
 .btn--full:link,
@@ -85,4 +66,98 @@ body {
 
 .margin-right-sm {
   margin-right: 1.6rem !important;
+}
+/* =======HEADER======= */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdf2e9;
+
+  /* Fixed height because it is easier to work with sticky position later on */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+.header .logo {
+  height: 2.2rem;
+}
+
+.main-nav {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.main-nav-list a:link,
+.main-nav-list a:visited {
+  text-decoration: none;
+  color: #333;
+  transition: border ease 0.1s;
+}
+
+.main-nav-list a:hover,
+.main-nav-list a:active {
+  border-bottom: 3px solid #e67e22;
+}
+/* =======HERO SECTION======= */
+
+.section-hero {
+  background: #fdf2e9;
+  padding: 9.6rem 0;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero {
+  margin: 0 auto;
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 9.6rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.delivered-meals {
+  margin-top: 8rem;
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.delivered-imgs {
+  display: flex;
+  align-items: center;
+}
+
+.delivered-imgs img {
+  border-radius: 50%;
+  width: 4.8rem;
+  width: 4.8rem;
+  border-left: 3px solid #fdf2e9;
+  margin-left: -10px;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
 }
