@@ -1,3 +1,35 @@
+/* 
+=====DEFAULT VALUES=====
+
+------1 TYPOGRAPHY------
+
+- font-sizes: (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 96
+
+- font-weights: 
+
+--default: 400;
+--medium: 500;
+--semi-bold: 600;
+--bold: 700;
+
+- line-heights: 
+--default: 1;
+--small: 1.05;
+--paragraph-default: 1.6;
+
+------2 COLORS-------
+
+--Primary: #e67e22;
+--Tints: #fdf2e9;
+--Accents: ;
+--Shades: #555, #333;
+
+------3 SHADOWS------
+
+------4 BORDER RADIUS-------
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
 
 * {
@@ -18,6 +50,18 @@ body {
 }
 
 /* =======GENERAL COMPONENTS======= */
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--col), 1fr);
+  grid-template-rows: repeat(var(--row), 1fr);
+}
 
 .heading-primary {
   font-size: 6.2rem;
@@ -92,20 +136,42 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 3.2rem;
 }
 
-.main-nav-list a:link,
-.main-nav-list a:visited {
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
   text-decoration: none;
+  font-weight: 500;
   color: #333;
-  transition: border ease 0.1s;
+  transition: all ease 0.2s;
+  font-size: 1.8rem;
 }
 
-.main-nav-list a:hover,
-.main-nav-list a:active {
+.main-nav-link:hover,
+.main-nav-link:active {
   border-bottom: 3px solid #e67e22;
 }
+
+.main-nav-list li:last-child a:hover,
+.main-nav-list li:last-child a:active {
+  border: none;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f;
+}
+
 /* =======HERO SECTION======= */
 
 .section-hero {
@@ -160,4 +226,12 @@ body {
 
 .delivered-text span {
   color: #cf711f;
+}
+
+/* =======HOW IT WORKS SECTION======= */
+
+.section-how {
+  padding: 9.6px 0;
+  background-color: orangered;
+  font-size: 50px;
 }
