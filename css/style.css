@@ -283,6 +283,9 @@
   color: #94d82d;
 }
 
+.list-icon[name="close-outline"] {
+  color: tomato;
+}
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
@@ -358,6 +361,48 @@
   padding: 9.6rem 0;
 }
 
+.pricing-grid {
+  gap: 9.6rem;
+  margin-bottom: 4.8rem;
+}
+
+.pricing-plan {
+  border-radius: 11px;
+  padding: 4.8rem;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pricing-plan.starter-plan {
+  justify-self: end;
+  outline: solid 3px #fdf2e9;
+}
+
+.pricing-plan.complete-plan {
+  background-color: #fdf2e9;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan.complete-plan::before {
+  content: "best value";
+  text-transform: uppercase;
+  transform: rotate(45deg);
+  color: #000;
+  background: #ffd43b;
+  font-weight: 600;
+  padding: 0.8rem 4rem;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  display: inline;
+  position: absolute;
+  top: 27px;
+  right: -40px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.075);
+}
+
 .plan-header {
   text-align: center;
   margin-bottom: 4.8rem;
@@ -388,9 +433,41 @@
 .plan-text {
   font-size: 1.6rem;
   line-height: 1.6;
-  color: #444;
+  color: #6f6f6f;
 }
 
 .plan-sign-up {
+  margin-top: 4.8rem;
   text-align: center;
+}
+
+.features-grid {
+  gap: 0 4.8rem;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 9.6rem;
+}
+
+.feature-icon {
+  background-color: #fdf2e9;
+  padding: 1.6rem;
+  border-radius: 50%;
+  color: #e67e22;
+  height: 2.4rem;
+  width: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+.feature-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
