@@ -141,8 +141,7 @@ strong {
 .btn--outline:visited {
   color: #555;
   background-color: #fff;
-  outline: 3px solid #fff;
-  outline-offset: -3px;
+  border: 3px solid #fff;
 }
 
 .btn--outline:hover,
