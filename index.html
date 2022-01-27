@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ominifood | Always eat well!</title>
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <meta
+      name="description"
+      content="Omnifood is a AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+    <title>Ominifood &ndash; Never cook again!</title>
+    <link rel="stylesheet" href="./css/general.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -14,19 +19,59 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/site.webmanifest" />
+    <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <header class="header">
-      <img class="logo" src="/img/omnifood-logo.png" alt="omnifood logo" />
+    <header class="header navigation-bar">
+      <a href="#">
+        <img class="logo" src="./img/omnifood-logo.png" alt="omnifood logo" />
+      </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Section 1</a></li>
-          <li><a class="main-nav-link" href="#">Section 2</a></li>
-          <li><a class="main-nav-link" href="#">Section 3</a></li>
-          <li><a class="main-nav-link" href="#">Section 4</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Section 5</a></li>
+          <li><a class="main-nav-link" href="#how">How it works?</a></li>
+          <li><a class="main-nav-link" href="#meals">Meals</a></li>
+          <li>
+            <a class="main-nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+          <li>
+            <a class="main-nav-link nav-cta" href="#cta">Try it for free</a>
+          </li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon
+          class="icon-mobile-nav open-menu-btn"
+          name="menu-outline"
+        ></ion-icon
+        ><ion-icon
+          class="icon-mobile-nav close-menu-btn"
+          name="close-outline"
+        ></ion-icon>
+      </button>
     </header>
     <main>
       <section class="section-hero">
@@ -40,18 +85,18 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a class="btn btn--full margin-right-sm" href="#"
+            <a class="btn btn--full margin-right-sm" href="#cta"
               >Start eating healthy</a
             >
-            <a class="btn btn--outline" href="#">Learn more &rArr;</a>
+            <a class="btn btn--outline" href="#how">Learn more &rArr;</a>
             <div class="delivered-meals">
               <div class="delivered-imgs">
-                <img src="img/customers/customer-1.jpg" alt="costumer" />
-                <img src="img/customers/customer-2.jpg" alt="costumer" />
-                <img src="img/customers/customer-3.jpg" alt="costumer" />
-                <img src="img/customers/customer-4.jpg" alt="costumer" />
-                <img src="img/customers/customer-5.jpg" alt="costumer" />
-                <img src="img/customers/customer-6.jpg" alt="costumer" />
+                <img src="./img/customers/customer-1.jpg" alt="costumer" />
+                <img src="./img/customers/customer-2.jpg" alt="costumer" />
+                <img src="./img/customers/customer-3.jpg" alt="costumer" />
+                <img src="./img/customers/customer-4.jpg" alt="costumer" />
+                <img src="./img/customers/customer-5.jpg" alt="costumer" />
+                <img src="./img/customers/customer-6.jpg" alt="costumer" />
               </div>
               <p class="delivered-text">
                 <span>250,000+</span> meals delivered last year!
@@ -59,30 +104,34 @@
             </div>
           </div>
           <div class="hero-image-box">
-            <img
-              class="hero-img"
-              src="/img/hero.png"
-              alt="woman enjoying food, meals in storage container, and food bowls on a table"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero.png" type="image/png" />
+              <img
+                class="hero-img"
+                src="./img/hero.webp"
+                alt="woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
           </div>
         </div>
       </section>
 
-      <section class="section-featured">
+      <section class="section-featured" id="how">
         <div class="container">
           <h2 class="heading-featured-in">As featured in</h2>
           <div class="logos">
-            <img src="/img/logos/techcrunch.png" alt="Techcrunch logo" />
+            <img src="./img/logos/techcrunch.png" alt="Techcrunch logo" />
             <img
-              src="/img/logos/business-insider.png"
+              src="./img/logos/business-insider.png"
               alt="Business insider logo"
             />
             <img
-              src="/img/logos/the-new-york-times.png"
+              src="./img/logos/the-new-york-times.png"
               alt="the new york times logo"
             />
-            <img src="/img/logos/forbes.png" alt="forbes logo" />
-            <img src="/img/logos/usa-today.png" alt="usa today logo" />
+            <img src="./img/logos/forbes.png" alt="forbes logo" />
+            <img src="./img/logos/usa-today.png" alt="usa today logo" />
           </div>
         </div>
       </section>
@@ -111,7 +160,7 @@
           <div class="step-img-box">
             <img
               class="step-img"
-              src="/img/app/app-screen-1.png"
+              src="./img/app/app-screen-1.png"
               alt="Iphone app reference"
             />
             <!-- STEP 2 -->
@@ -119,7 +168,7 @@
           <div class="step-img-box">
             <img
               class="step-img"
-              src="/img/app/app-screen-2.png"
+              src="./img/app/app-screen-2.png"
               alt="Iphone app reference"
             />
           </div>
@@ -145,14 +194,14 @@
           <div class="step-img-box">
             <img
               class="step-img"
-              src="/img/app/app-screen-3.png"
+              src="./img/app/app-screen-3.png"
               alt="Iphone app reference"
             />
           </div>
         </div>
       </section>
 
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -161,14 +210,14 @@
         </div>
 
         <div
-          class="container grid margin--bottom-md"
+          class="container grid margin--bottom-md grid-to-two-col"
           style="--row: 1; --col: 3"
         >
           <!-- CARD 1 -->
           <div class="meal">
             <img
               class="meal-img"
-              src="img/meals/meal-1.jpg"
+              src="./img/meals/meal-1.jpg"
               alt="japanese gyosas"
             />
             <div class="meal-content">
@@ -199,7 +248,7 @@
           <div class="meal">
             <img
               class="meal-img"
-              src="img/meals/meal-2.jpg"
+              src="./img/meals/meal-2.jpg"
               alt="avocado salad"
             />
             <div class="meal-content">
@@ -272,7 +321,11 @@
         </div>
       </section>
 
-      <section class="section-testimonials grid" style="--col: 2">
+      <section
+        id="testimonials"
+        class="section-testimonials grid"
+        style="--col: 2"
+      >
         <div class="testimonial-title">
           <span class="subheading">Testimonials</span>
           <h2 class="heading-secondary no-margin">
@@ -283,7 +336,7 @@
           <div class="testimonial">
             <img
               class="testimonial-img"
-              src="img/customers/dave.jpg"
+              src="./img/customers/dave.jpg"
               alt="dave bryson"
             />
             <blockquote class="testimonial-text">
@@ -296,7 +349,7 @@
           <div class="testimonial">
             <img
               class="testimonial-img"
-              src="img/customers/ben.jpg"
+              src="./img/customers/ben.jpg"
               alt="ben hadley"
             />
             <blockquote class="testimonial-text">
@@ -309,7 +362,7 @@
           <div class="testimonial">
             <img
               class="testimonial-img"
-              src="img/customers/hannah.jpg"
+              src="./img/customers/hannah.jpg"
               alt="hannah smith"
             />
             <blockquote class="testimonial-text">
@@ -322,7 +375,7 @@
           <div class="testimonial">
             <img
               class="testimonial-img"
-              src="img/customers/steve.jpg"
+              src="./img/customers/steve.jpg"
               alt="steve miller"
             />
             <blockquote class="testimonial-text">
@@ -336,7 +389,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-1.jpg"
+              src="./img/gallery/gallery-1.jpg"
               alt="photo of food"
             />
           </div>
@@ -344,7 +397,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-2.jpg"
+              src="./img/gallery/gallery-2.jpg"
               alt="photo of food"
             />
           </div>
@@ -352,7 +405,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-3.jpg"
+              src="./img/gallery/gallery-3.jpg"
               alt="photo of food"
             />
           </div>
@@ -360,7 +413,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-4.jpg"
+              src="./img/gallery/gallery-4.jpg"
               alt="photo of food"
             />
           </div>
@@ -368,7 +421,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-5.jpg"
+              src="./img/gallery/gallery-5.jpg"
               alt="photo of food"
             />
           </div>
@@ -376,7 +429,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-6.jpg"
+              src="./img/gallery/gallery-6.jpg"
               alt="photo of food"
             />
           </div>
@@ -384,7 +437,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-7.jpg"
+              src="./img/gallery/gallery-7.jpg"
               alt="photo of food"
             />
           </div>
@@ -392,7 +445,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-8.jpg"
+              src="./img/gallery/gallery-8.jpg"
               alt="photo of food"
             />
           </div>
@@ -400,7 +453,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-9.jpg"
+              src="./img/gallery/gallery-9.jpg"
               alt="photo of food"
             />
           </div>
@@ -408,7 +461,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-10.jpg"
+              src="./img/gallery/gallery-10.jpg"
               alt="photo of food"
             />
           </div>
@@ -416,7 +469,7 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-11.jpg"
+              src="./img/gallery/gallery-11.jpg"
               alt="photo of food"
             />
           </div>
@@ -424,13 +477,13 @@
           <div class="gallery-item">
             <img
               class="gallery-img"
-              src="img/gallery/gallery-12.jpg"
+              src="./img/gallery/gallery-12.jpg"
               alt="photo of food"
             />
           </div>
         </div>
       </section>
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -530,7 +583,10 @@
           </aside>
         </div>
 
-        <div class="container grid features-grid" style="--col: 4">
+        <div
+          class="container grid features-grid grid-to-two-col"
+          style="--col: 4"
+        >
           <div class="feature">
             <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
             <p class="feature-title">Never cook again!</p>
@@ -566,7 +622,7 @@
         </div>
       </section>
 
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -617,22 +673,77 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container grid" style="--col: 5">
+        <div class="logo-col">
+          <a href="#">
+            <img
+              class="footer-logo logo"
+              src="./img/omnifood-logo.png"
+              alt="omnifood logo"
+            />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; 2022 by Omnifood. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">
+              623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </p>
+            <a class="footer-link" href="tel:415-201-6370"> 415-201-6370 </a
+            ><br />
+            <a class="footer-link" href="mailto:hello@omnifood.com"
+              >hello@omnifood.com</a
+            >
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Omnifood</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Cooking Partners</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Recipe directory</a></li>
+            <li><a class="footer-link" href="#">Help center</a></li>
+            <li><a class="footer-link" href="#">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
   </body>
-
-  <script>
-    let gallery = document.querySelectorAll(".gallery-img");
-    for (let i = 0; i < gallery.length; i++) {
-      gallery[i].addEventListener("mouseover", (target) => {
-        gallery.forEach((x) => {
-          x.classList.toggle("blur");
-        });
-        gallery[i].classList.toggle("blur");
-      });
-      gallery[i].addEventListener("mouseout", (target) => {
-        gallery.forEach((x) => {
-          x.classList.remove("blur");
-        });
-      });
-    }
-  </script>
 </html>
