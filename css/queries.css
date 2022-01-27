@@ -227,6 +227,7 @@
   .btn:link,
   .btn:visited {
     padding: 2rem 1rem;
+    font-size: 1.2rem;
   }
 
   .hero-img {
